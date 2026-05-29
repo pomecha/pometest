@@ -1,0 +1,1255 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ナイジェリア 高級ハイヤー用 中古車 選定ガイド 2025</title>
+  <style>
+    :root {
+      --bg: #0f1117;
+      --card-bg: #1a1d27;
+      --card-border: #2a2d3e;
+      --accent: #c9a84c;
+      --accent2: #e8c96a;
+      --text: #e0e0e0;
+      --text-muted: #888;
+      --green: #4caf82;
+      --orange: #e07a3a;
+      --red: #e05050;
+      --blue: #4a9fd4;
+      --tier1: #4caf82;
+      --tier2: #4a9fd4;
+      --tier3: #c9a84c;
+      --tier4: #9b59b6;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(135deg, #1a1d27 0%, #0f1117 100%);
+      border-bottom: 2px solid var(--accent);
+      padding: 40px 24px 32px;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2rem;
+      color: var(--accent2);
+      letter-spacing: 0.04em;
+      margin-bottom: 8px;
+    }
+    header p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+    .stats-bar {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      flex-wrap: wrap;
+      padding: 20px 24px;
+      background: #131620;
+      border-bottom: 1px solid var(--card-border);
+    }
+    .stat-item { text-align: center; }
+    .stat-item .num { font-size: 1.6rem; font-weight: 700; color: var(--accent); }
+    .stat-item .lbl { font-size: 0.75rem; color: var(--text-muted); }
+    .filters {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      padding: 20px 24px;
+      background: #0f1117;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid var(--card-border);
+    }
+    .filter-btn {
+      padding: 6px 16px;
+      border: 1px solid var(--card-border);
+      background: transparent;
+      color: var(--text-muted);
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 0.85rem;
+      transition: all 0.2s;
+    }
+    .filter-btn:hover, .filter-btn.active {
+      border-color: var(--accent);
+      color: var(--accent);
+      background: rgba(201,168,76,0.08);
+    }
+    .exchange-note {
+      text-align: center;
+      padding: 10px;
+      background: rgba(74,159,212,0.08);
+      border: 1px solid rgba(74,159,212,0.2);
+      margin: 16px 24px;
+      border-radius: 8px;
+      font-size: 0.82rem;
+      color: var(--blue);
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 20px;
+      padding: 16px 24px 40px;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-2px);
+      border-color: var(--accent);
+    }
+    .card-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      background: #1e2130;
+      display: block;
+    }
+    .card-img-placeholder {
+      width: 100%;
+      height: 200px;
+      background: linear-gradient(135deg, #1e2130, #252840);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      color: #2a2d3e;
+    }
+    .card-body { padding: 16px; }
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 10px;
+    }
+    .car-name {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #fff;
+    }
+    .car-brand {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+    .tier-badge {
+      font-size: 0.7rem;
+      padding: 3px 10px;
+      border-radius: 12px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    .tier-budget { background: rgba(76,175,130,0.15); color: var(--tier1); border: 1px solid rgba(76,175,130,0.3); }
+    .tier-mid    { background: rgba(74,159,212,0.15); color: var(--tier2); border: 1px solid rgba(74,159,212,0.3); }
+    .tier-premium{ background: rgba(201,168,76,0.15); color: var(--tier3); border: 1px solid rgba(201,168,76,0.3); }
+    .tier-ultra  { background: rgba(155,89,182,0.15); color: var(--tier4); border: 1px solid rgba(155,89,182,0.3); }
+    .price-range {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--accent2);
+      margin-bottom: 12px;
+    }
+    .price-range span { font-size: 0.75rem; color: var(--text-muted); font-weight: 400; }
+    .specs-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px;
+      margin-bottom: 12px;
+    }
+    .spec-item {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--card-border);
+      border-radius: 6px;
+      padding: 6px 10px;
+    }
+    .spec-label { font-size: 0.65rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; }
+    .spec-value { font-size: 0.85rem; color: var(--text); }
+    .ratings {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px;
+      margin-bottom: 12px;
+    }
+    .rating-row { }
+    .rating-label { font-size: 0.7rem; color: var(--text-muted); margin-bottom: 2px; }
+    .stars { display: flex; gap: 2px; }
+    .star { width: 12px; height: 12px; border-radius: 2px; }
+    .star.on  { background: var(--accent); }
+    .star.off { background: #2a2d3e; }
+    .star.green-on { background: var(--green); }
+    .star.blue-on  { background: var(--blue); }
+    .star.red-on   { background: #e07a3a; }
+    .notes {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      border-top: 1px solid var(--card-border);
+      padding-top: 10px;
+      margin-top: 4px;
+    }
+    .note-pro  { color: var(--green); }
+    .note-con  { color: var(--orange); }
+    .jiji-link {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 5px 12px;
+      font-size: 0.75rem;
+      border: 1px solid rgba(201,168,76,0.3);
+      border-radius: 6px;
+      color: var(--accent);
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .jiji-link:hover { background: rgba(201,168,76,0.1); }
+    footer {
+      text-align: center;
+      padding: 32px 24px;
+      color: var(--text-muted);
+      font-size: 0.8rem;
+      border-top: 1px solid var(--card-border);
+    }
+    .hidden { display: none !important; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>🇳🇬 ナイジェリア 高級ハイヤー用 中古車 選定ガイド</h1>
+  <p>jiji.ng 市場データ・2025年版 ／ 価格はナイラ（₦）表示</p>
+</header>
+
+<div class="stats-bar">
+  <div class="stat-item"><div class="num">16</div><div class="lbl">対象車種</div></div>
+  <div class="stat-item"><div class="num">₦2.4M〜</div><div class="lbl">最低価格（中古）</div></div>
+  <div class="stat-item"><div class="num">4ティア</div><div class="lbl">価格帯区分</div></div>
+  <div class="stat-item"><div class="num">jiji.ng</div><div class="lbl">主要参考市場</div></div>
+</div>
+
+<div class="exchange-note">
+  💱 参考レート：1 USD ≈ ₦1,600〜1,800（2025年5月時点） ／ ₦10M ≈ 約55〜62万円（1USD≈155円換算）
+</div>
+
+<div class="filters">
+  <button class="filter-btn active" data-filter="all">すべて表示</button>
+  <button class="filter-btn" data-filter="budget">エントリー（〜₦25M）</button>
+  <button class="filter-btn" data-filter="mid">ミッドレンジ（₦25〜60M）</button>
+  <button class="filter-btn" data-filter="premium">プレミアム（₦60〜150M）</button>
+  <button class="filter-btn" data-filter="ultra">ウルトラ（₦150M〜）</button>
+  <button class="filter-btn" data-filter="toyota">トヨタ/レクサス系</button>
+  <button class="filter-btn" data-filter="euro">欧州車</button>
+</div>
+
+<div class="grid" id="carGrid">
+
+  <!-- 1. Lexus RX 350 -->
+  <div class="card" data-tier="mid" data-brand="toyota">
+    <img class="card-img"
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/2020_Lexus_RX_350_F_Sport_%28facelift%2C_black%29%2C_front_8.22.19.jpg/800px-2020_Lexus_RX_350_F_Sport_%28facelift%2C_black%29%2C_front_8.22.19.jpg"
+      alt="Lexus RX 350"
+      onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="card-img-placeholder" style="display:none">🚙</div>
+    <div class="card-body">
+      <div class="card-header">
+        <div>
+          <div class="car-brand">Lexus</div>
+          <div class="car-name">RX 350</div>
+        </div>
+        <span class="tier-badge tier-mid">ミッドレンジ</span>
+      </div>
+      <div class="price-range">₦15M 〜 ₦50M <span>（中古・2013〜2022年式）</span></div>
+      <div class="specs-grid">
+        <div class="spec-item"><div class="spec-label">エンジン</div><div class="spec-value">3.5L V6</div></div>
+        <div class="spec-item"><div class="spec-label">馬力</div><div class="spec-value">295hp</div></div>
+        <div class="spec-item"><div class="spec-label">定員</div><div class="spec-value">5名</div></div>
+        <div class="spec-item"><div class="spec-label">燃料</div><div class="spec-value">ガソリン</div></div>
+        <div class="spec-item"><div class="spec-label">車高</div><div class="spec-value">1,695mm</div></div>
+        <div class="spec-item"><div class="spec-label">最低地上高</div><div class="spec-value">195mm</div></div>
+      </div>
+      <div class="ratings">
+        <div class="rating-row">
+          <div class="rating-label">威信度</div>
+          <div class="stars">
+            <div class="star on"></div><div class="star on"></div><div class="star on"></div><div class="star on"></div><div class="star off"></div>
+          </div>
+        </div>
+        <div class="rating-row">
+          <div class="rating-label">信頼性</div>
+          <div class="stars">
+            <div class="star green-on"></div><div class="star green-on"></div><div class="star green-on"></div><div class="star green-on"></div><div class="star green-on"></div>
+          </div>
+        </div>
+        <div class="rating-row">
+          <div class="rating-label">道路適性</div>
+          <div class="stars">
+            <div class="star blue-on"></div><div class="star blue-on"></div><div class="star blue-on"></div><div class="star off"></div><div class="star off"></div>
+          </div>
+        </div>
+        <div class="rating-row">
+          <div class="rating-label">コストパフォーマンス</div>
+          <div class="stars">
+            <div class="star red-on"></div><div class="star red-on"></div><div class="star red-on"></div><div class="star red-on"></div><div class="star off"></div>
+          </div>
+        </div>
+      </div>
+      <div class="notes">
+        <div class="note-pro">✓ レクサスブランドで顧客印象良好</div>
+        <div class="note-pro">✓ 部品入手容易・維持費安め</div>
+        <div class="note-con">△ クロスオーバーSUVで地上高低め（悪路注意）</div>
+        <div class="note-con">△ 5人乗りのみ</div>
+      </div>
+      <a href="https://jiji.ng/cars/lexus-rx-350" target="_blank" class="jiji-link">jiji.ng で探す →</a>
+    </div>
+  </div>
+
+  <!-- 2. Lexus GX 460 -->
+  <div class="card" data-tier="mid" data-brand="toyota">
+    <img class="card-img"
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/2022_Lexus_GX_460_%28facelift%2C_grey%29%2C_front_7.3.21.jpg/800px-2022_Lexus_GX_460_%28facelift%2C_grey%29%2C_front_7.3.21.jpg"
+      alt="Lexus GX 460"
+      onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="card-img-placeholder" style="display:none">🚙</div>
+    <div class="card-body">
+      <div class="card-header">
+        <div>
+          <div class="car-brand">Lexus</div>
+          <div class="car-name">GX 460 / GX 550</div>
+        </div>
+        <span class="tier-badge tier-mid">ミッドレンジ</span>
+      </div>
+      <div class="price-range">₦12M 〜 ₦55M <span>（中古・2010〜2023年式）</span></div>
+      <div class="specs-grid">
+        <div class="spec-item"><div class="spec-label">エンジン</div><div class="spec-value">4.6L V8 (460) / 3.4L V6T (550)</div></div>
+        <div class="spec-item"><div class="spec-label">馬力</div><div class="spec-value">301hp / 349hp</div></div>
+        <div class="spec-item"><div class="spec-label">定員</div><div class="spec-value">7〜8名</div></div>
+        <div class="spec-item"><div class="spec-label">燃料</div><div class="spec-value">ガソリン</div></div>
+        <div class="spec-item"><div class="spec-label">駆動</div><div class="spec-value">4WD（パートタイム）</div></div>
+        <div class="spec-item"><div class="spec-label">最低地上高</div><div class="spec-value">220mm</div></div>
+      </div>
+      <div class="ratings">
+        <div class="rating-row">
+          <div class="rating-label">威信度</div>
+          <div class="stars">
+            <div class="star on"></div><div class="star on"></div><div class="star on"></div><div class="star on"></div><div class="star off"></div>
+          </div>
+        </div>
+        <div class="rating-row">
+          <div class="rating-label">信頼性</div>
+          <div class="stars">
+            <div class="star green-on"></div><div class="star green-on"></div><div class="star green-on"></div><div class="star green-on"></div><div class="star green-on"></div>
+          </div>
+        </div>
+        <div class="rating-row">
+          <div class="rating-label">道路適性</div>
+          <div class="stars">
+            <div class="star blue-on"></div><div class="star blue-on"></div><div class="star blue-on"></div><div class="star blue-on"></div><div class="star blue-on"></div>
+          </div>
+        </div>
+        <div class="rating-row">
+          <div class="rating-label">コストパフォーマンス</div>
+          <div class="stars">
+            <div class="star red-on"></div><div class="star red-on"></div><div class="star red-on"></div><div class="star red-on"></div><div class="star off"></div>
+          </div>
+        </div>
+      </div>
+      <div class="notes">
+        <div class="note-pro">✓ ランクル系ボディオンフレーム構造で悪路に強い</div>
+        <div class="note-pro">✓ 7〜8人乗り・グループ送迎対応</div>
+        <div class="note-pro">✓ レクサスブランドで高級感あり</div>
+        <div class="note-con">△ 燃費が悪い（約9〜10L/100km）</div>
+      </div>
+      <a href="https://jiji.ng/cars/lexus-gx-460" target="_blank" class="jiji-link">jiji.ng で探す →</a>
+    </div>
+  </div>
+
+  <!-- 3. Lexus LX 570 / LX 600 -->
+  <div class="card" data-tier="premium" data-brand="toyota">
+    <img class="card-img"
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/2016_Lexus_LX_570_%28URJ201R%29_wagon_%282016-10-12%29_01.jpg/800px-2016_Lexus_LX_570_%28URJ201R%29_wagon_%282016-10-12%29_01.jpg"
+      alt="Lexus LX 570"
+      onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="card-img-placeholder" style="display:none">🚙</div>
+    <div class="card-body">
+      <div class="card-header">
+        <div>
+          <div class="car-brand">Lexus</div>
+          <div class="car-name">LX 570 / LX 600</div>
+        </div>
+        <span class="tier-badge tier-premium">プレミアム</span>
+      </div>
+      <div class="price-range">₦57M 〜 ₦140M <span>（中古・2015〜2022年式）</span></div>
+      <div class="specs-grid">
+        <div class="spec-item"><div class="spec-label">エンジン</div><div class="spec-value">5.7L V8 / 3.5L TTV6</div></div>
+        <div class="spec-item"><div class="spec-label">馬力</div><div class="spec-value">383hp / 409hp</div></div>
+        <div class="spec-item"><div class="spec-label">定員</div><div class="spec-value">7〜8名</div></div>
+        <div class="spec-item"><div class="spec-label">燃料</div><div class="spec-value">ガソリン</div></div>
+        <div class="spec-item"><div class="spec-label">駆動</div><div class="spec-value">AWD（KDSS）</div></div>
+        <div class="spec-item"><div class="spec-label">最低地上高</div><div class="spec-value">225mm</div></div>
+      </div>
+      <div class="ratings">
+        <div class="rating-row">
+          <div class="rating-label">威信度</div>
+          <div class="stars">
+            <div class="star on"></div><div class="star on"></div><div class="star on"></div><div class="star on"></div><div class="star on"></div>
+          </div>
+        </div>
+        <div class="rating-row">
+          <div class="rating-label">信頼性</div>
+          <div class="stars">
+            <div class="star green-on"></div><div class="star green-on"></div><div class="star green-on"></div><div class="star green-on"></div><div class="star green-on"></div>
+          </div>
+        </div>
+        <div class="rating-row">
+          <div class="rating-label">道路適性</div>
+          <div class="stars">
+            <div class="star blue-on"></div><div class="star blue-on"></div><div class="star blue-on"></div><div class="star blue-on"></div><div class="star blue-on"></div>
+          </div>
+        </div>
+        <div class="rating-row">
+          <div class="rating-label">コストパフォーマンス</div>
+          <div class="stars">
+            <div class="star red-on"></div><div class="star red-on"></div><div class="star red-on"></div><div class="star off"></div><div class="star off"></div>
+          </div>
+        </div>
+      </div>
+      <div class="notes">
+        <div class="note-pro">✓ ナイジェリア最人気の高級ハイヤー車の一つ</div>
+        <div class="note-pro">✓ ランクルベースで最高の信頼性と悪路走破性</div>
+        <div class="note-pro">✓ ハイレベルな内装・重役・政府VIP向け</div>
+        <div class="note-con">△ 初期費用が高め</div>
+      </div>
+      <a href="https://jiji.ng/cars/lexus-lx-570" target="_blank" class="jiji-link">jiji.ng で探す →</a>
+    </div>
+  </div>
+
+  <!-- 4. Land Cruiser Prado -->
+  <div class="card" data-tier="mid" data-brand="toyota">
+    <img class="card-img"
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/2018_Toyota_Land_Cruiser_Prado_%28J150%2C_facelift%29_GXL_%28Australia%29_front_side_view.jpg/800px-2018_Toyota_Land_Cruiser_Prado_%28J150%2C_facelift%29_GXL_%28Australia%29_front_side_view.jpg"
+      alt="Land Cruiser Prado"
+      onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="card-img-placeholder" style="display:none">🚙</div>
+    <div class="card-body">
+      <div class="card-header">
+        <div>
+          <div class="car-brand">Toyota</div>
+          <div class="car-name">Land Cruiser Prado</div>
+        </div>
+        <span class="tier-badge tier-mid">ミッドレンジ</span>
+      </div>
+      <div class="price-range">₦8M 〜 ₦50M <span>（中古・2010〜2022年式）</span></div>
+      <div class="specs-grid">
+        <div class="spec-item"><div class="spec-label">エンジン</div><div class="spec-value">2.7L/4.0L Gas / 3.0L D</div></div>
+        <div class="spec-item"><div class="spec-label">馬力</div><div class="spec-value">163〜270hp</div></div>
+        <div class="spec-item"><div class="spec-label">定員</div><div class="spec-value">7名</div></div>
+        <div class="spec-item"><div class="spec-label">燃料</div><div class="spec-value">ガソリン／ディーゼル</div></div>
+        <div class="spec-item"><div class="spec-label">駆動</div><div class="spec-value">4WD（パートタイム）</div></div>
+        <div class="spec-item"><div class="spec-label">最低地上高</div><div class="spec-value">215mm</div></div>
+      </div>
+      <div class="ratings">
+        <div class="rating-row">
+          <div class="rating-label">威信度</div>
+          <div class="stars">
+            <div class="star on"></div><div class="star on"></div><div class="star on"></div><div class="star on"></div><div class="star off"></div>
+          </div>
+        </div>
+        <div class="rating-row">
+          <div class="rating-label">信頼性</div>
+          <div class="stars">
+            <div class="star green-on"></div><div class="star green-on"></div><div class="star green-on"></div><div class="star green-on"></div><div class="star green-on"></div>
+          </div>
+        </div>
+        <div class="rating-row">
+          <div class="rating-label">道路適性</div>
+          <div class="stars">
+            <div class="star blue-on"></div><div class="star blue-on"></div><div class="star blue-on"></div><div class="star blue-on"></div><div class="star blue-on"></div>
+          </div>
+        </div>
+        <div class="rating-row">
+          <div class="rating-label">コストパフォーマンス</div>
+          <div class="stars">
+            <div class="star red-on"></div><div class="star red-on"></div><div class="star red-on"></div><div class="star red-on"></div><div class="star red-on"></div>
+          </div>
+        </div>
+      </div>
+      <div class="notes">
+        <div class="note-pro">✓ ナイジェリアで最も信頼されるSUVのひとつ</div>
+        <div class="note-pro">✓ ハイヤー料金 ₦100,000〜135,000/日（推定）</div>
+        <div class="note-pro">✓ 部品・整備環境が充実</div>
+        <div class="note-con">△ ガソリン車は燃費が課題</div>
+      </div>
+      <a href="https://jiji.ng/cars/toyota-land-cruiser-prado" target="_blank" class="jiji-link">jiji.ng で探す →</a>
+    </div>
+  </div>
+
+  <!-- 5. Land Cruiser LC300 -->
+  <div class="card" data-tier="ultra" data-brand="toyota">
+    <img class="card-img"
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/2022_Toyota_Land_Cruiser_300_GR_Sport%2C_front_8.14.21.jpg/800px-2022_Toyota_Land_Cruiser_300_GR_Sport%2C_front_8.14.21.jpg"
+      alt="Land Cruiser LC300"
+      onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="card-img-placeholder" style="display:none">🚙</div>
+    <div class="card-body">
+      <div class="card-header">
+        <div>
+          <div class="car-brand">Toyota</div>
+          <div class="car-name">Land Cruiser (LC300)</div>
+        </div>
+        <span class="tier-badge tier-ultra">ウルトラ</span>
+      </div>
+      <div class="price-range">₦100M 〜 ₦350M <span>（2021〜2025年式）</span></div>
+      <div class="specs-grid">
+        <div class="spec-item"><div class="spec-label">エンジン</div><div class="spec-value">3.5L ツインターボ V6</div></div>
+        <div class="spec-item"><div class="spec-label">馬力</div><div class="spec-value">415hp</div></div>
+        <div class="spec-item"><div class="spec-label">定員</div><div class="spec-value">5〜8名</div></div>
+        <div class="spec-item"><div class="spec-label">燃料</div><div class="spec-value">ガソリン</div></div>
+        <div class="spec-item"><div class="spec-label">駆動</div><div class="spec-value">4WD（E-KDSS）</div></div>
+        <div class="spec-item"><div class="spec-label">最低地上高</div><div class="spec-value">225mm</div></div>
+      </div>
+      <div class="ratings">
+        <div class="rating-row">
+          <div class="rating-label">威信度</div>
+          <div class="stars">
+            <div class="star on"></div><div class="star on"></div><div class="star on"></div><div class="star on"></div><div class="star on"></div>
+          </div>
+        </div>
+        <div class="rating-row">
+          <div class="rating-label">信頼性</div>
+          <div class="stars">
+            <div class="star green-on"></div><div class="star green-on"></div><div class="star green-on"></div><div class="star green-on"></div><div class="star green-on"></div>
+          </div>
+        </div>
+        <div class="rating-row">
+          <div class="rating-label">道路適性</div>
+          <div class="stars">
+            <div class="star blue-on"></div><div class="star blue-on"></div><div class="star blue-on"></div><div class="star blue-on"></div><div class="star blue-on"></div>
+          </div>
+        </div>
+        <div class="rating-row">
+          <div class="rating-label">コストパフォーマンス</div>
+          <div class="stars">
+            <div class="star red-on"></div><div class="star red-on"></div><div class="star off"></div><div class="star off"></div><div class="star off"></div>
+          </div>
+        </div>
+      </div>
+      <div class="notes">
+        <div class="note-pro">✓ ナイジェリアで政治家・CEO御用達の最高峰SUV</div>
+        <div class="note-pro">✓ 絶大な信頼性と走破性・バリューリテンションも高い</div>
+        <div class="note-con">△ 初期投資が非常に高い（₦100M〜）</div>
+        <div class="note-con">△ 人気のため在庫が少ない</div>
+      </div>
+      <a href="https://jiji.ng/cars/toyota-land-cruiser" target="_blank" class="jiji-link">jiji.ng で探す →</a>
+    </div>
+  </div>
+
+  <!-- 6. Toyota Highlander -->
+  <div class="card" data-tier="budget" data-brand="toyota">
+    <img class="card-img"
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/2020_Toyota_Highlander_Platinum_%28facelift%29%2C_front_10.30.20.jpg/800px-2020_Toyota_Highlander_Platinum_%28facelift%29%2C_front_10.30.20.jpg"
+      alt="Toyota Highlander"
+      onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="card-img-placeholder" style="display:none">🚙</div>
+    <div class="card-body">
+      <div class="card-header">
+        <div>
+          <div class="car-brand">Toyota</div>
+          <div class="car-name">Highlander</div>
+        </div>
+        <span class="tier-badge tier-budget">エントリー</span>
+      </div>
+      <div class="price-range">₦10M 〜 ₦56M <span>（中古・2005〜2022年式）</span></div>
+      <div class="specs-grid">
+        <div class="spec-item"><div class="spec-label">エンジン</div><div class="spec-value">3.5L V6 / ハイブリッド</div></div>
+        <div class="spec-item"><div class="spec-label">馬力</div><div class="spec-value">295〜306hp</div></div>
+        <div class="spec-item"><div class="spec-label">定員</div><div class="spec-value">7〜8名</div></div>
+        <div class="spec-item"><div class="spec-label">燃料</div><div class="spec-value">ガソリン／ハイブリッド</div></div>
+        <div class="spec-item"><div class="spec-label">駆動</div><div class="spec-value">FF / AWD</div></div>
+        <div class="spec-item"><div class="spec-label">最低地上高</div><div class="spec-value">200mm</div></div>
+      </div>
+      <div class="ratings">
+        <div class="rating-row">
+          <div class="rating-label">威信度</div>
+          <div class="stars">
+            <div class="star on"></div><div class="star on"></div><div class="star on"></div><div class="star off"></div><div class="star off"></div>
+          </div>
+        </div>
+        <div class="rating-row">
+          <div class="rating-label">信頼性</div>
+          <div class="stars">
+            <div class="star green-on"></div><div class="star green-on"></div><div class="star green-on"></div><div class="star green-on"></div><div class="star green-on"></div>
+          </div>
+        </div>
+        <div class="rating-row">
+          <div class="rating-label">道路適性</div>
+          <div class="stars">
+            <div class="star blue-on"></div><div class="star blue-on"></div><div class="star blue-on"></div><div class="star off"></div><div class="star off"></div>
+          </div>
+        </div>
+        <div class="rating-row">
+          <div class="rating-label">コストパフォーマンス</div>
+          <div class="stars">
+            <div class="star red-on"></div><div class="star red-on"></div><div class="star red-on"></div><div class="star red-on"></div><div class="star red-on"></div>
+          </div>
+        </div>
+      </div>
+      <div class="notes">
+        <div class="note-pro">✓ ナイジェリアで8,000台以上の流通（在庫豊富）</div>
+        <div class="note-pro">✓ 安価なエントリー価格・初期投資を抑えられる</div>
+        <div class="note-pro">✓ 7〜8名乗りで家族・グループ向け</div>
+        <div class="note-con">△ 悪路では地上高が不足することも</div>
+        <div class="note-con">△ ハイヤーとしての格はやや低め</div>
+      </div>
+      <a href="https://jiji.ng/cars/toyota-highlander" target="_blank" class="jiji-link">jiji.ng で探す →</a>
+    </div>
+  </div>
+
+  <!-- 7. Toyota Hilux -->
+  <div class="card" data-tier="budget" data-brand="toyota">
+    <img class="card-img"
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/2021_Toyota_HiLux_Invincible_%28UK%29%2C_front_11.27.21.jpg/800px-2021_Toyota_HiLux_Invincible_%28UK%29%2C_front_11.27.21.jpg"
+      alt="Toyota Hilux"
+      onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="card-img-placeholder" style="display:none">🚙</div>
+    <div class="card-body">
+      <div class="card-header">
+        <div>
+          <div class="car-brand">Toyota</div>
+          <div class="car-name">Hilux</div>
+        </div>
+        <span class="tier-badge tier-budget">エントリー</span>
+      </div>
+      <div class="price-range">₦6M 〜 ₦51M <span>（中古〜新車・2010〜2025年式）</span></div>
+      <div class="specs-grid">
+        <div class="spec-item"><div class="spec-label">エンジン</div><div class="spec-value">2.7L Gas / 2.8L Diesel</div></div>
+        <div class="spec-item"><div class="spec-label">馬力</div><div class="spec-value">166〜204hp</div></div>
+        <div class="spec-item"><div class="spec-label">定員</div><div class="spec-value">5名</div></div>
+        <div class="spec-item"><div class="spec-label">燃料</div><div class="spec-value">ガソリン／ディーゼル</div></div>
+        <div class="spec-item"><div class="spec-label">駆動</div><div class="spec-value">4WD（パートタイム）</div></div>
+        <div class="spec-item"><div class="spec-label">最低地上高</div><div class="spec-value">279mm（ピックアップ）</div></div>
+      </div>
+      <div class="ratings">
+        <div class="rating-row">
+          <div class="rating-label">威信度</div>
+          <div class="stars">
+            <div class="star on"></div><div class="star on"></div><div class="star on"></div><div class="star off"></div><div class="star off"></div>
+          </div>
+        </div>
+        <div class="rating-row">
+          <div class="rating-label">信頼性</div>
+          <div class="stars">
+            <div class="star green-on"></div><div class="star green-on"></div><div class="star green-on"></div><div class="star green-on"></div><div class="star green-on"></div>
+          </div>
+        </div>
+        <div class="rating-row">
+          <div class="rating-label">道路適性</div>
+          <div class="stars">
+            <div class="star blue-on"></div><div class="star blue-on"></div><div class="star blue-on"></div><div class="star blue-on"></div><div class="star blue-on"></div>
+          </div>
+        </div>
+        <div class="rating-row">
+          <div class="rating-label">コストパフォーマンス</div>
+          <div class="stars">
+            <div class="star red-on"></div><div class="star red-on"></div><div class="star red-on"></div><div class="star red-on"></div><div class="star off"></div>
+          </div>
+        </div>
+      </div>
+      <div class="notes">
+        <div class="note-pro">✓ ピックアップトラックで最高の悪路走破性</div>
+        <div class="note-pro">✓ ディーゼルは燃費良く維持費安い</div>
+        <div class="note-pro">✓ 資材・荷物輸送も兼用可能</div>
+        <div class="note-con">△ ピックアップのため純粋な「ハイヤー」には不向き</div>
+        <div class="note-con">△ 後部座席がSUVより狭い</div>
+      </div>
+      <a href="https://jiji.ng/cars/toyota-hilux" target="_blank" class="jiji-link">jiji.ng で探す →</a>
+    </div>
+  </div>
+
+  <!-- 8. Range Rover -->
+  <div class="card" data-tier="premium" data-brand="euro">
+    <img class="card-img"
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/2022_Range_Rover_Autobiography_%28L460%29%2C_front_9.11.22.jpg/800px-2022_Range_Rover_Autobiography_%28L460%29%2C_front_9.11.22.jpg"
+      alt="Range Rover"
+      onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="card-img-placeholder" style="display:none">🚙</div>
+    <div class="card-body">
+      <div class="card-header">
+        <div>
+          <div class="car-brand">Land Rover</div>
+          <div class="car-name">Range Rover (Sport / Vogue)</div>
+        </div>
+        <span class="tier-badge tier-premium">プレミアム</span>
+      </div>
+      <div class="price-range">₦30M 〜 ₦385M <span>（中古〜新車・2015〜2024年式）</span></div>
+      <div class="specs-grid">
+        <div class="spec-item"><div class="spec-label">エンジン</div><div class="spec-value">3.0L I6 / 5.0L V8</div></div>
+        <div class="spec-item"><div class="spec-label">馬力</div><div class="spec-value">340〜567hp</div></div>
+        <div class="spec-item"><div class="spec-label">定員</div><div class="spec-value">5〜7名</div></div>
+        <div class="spec-item"><div class="spec-label">燃料</div><div class="spec-value">ガソリン／ディーゼル／PHEV</div></div>
+        <div class="spec-item"><div class="spec-label">駆動</div><div class="spec-value">AWD（エアサス）</div></div>
+        <div class="spec-item"><div class="spec-label">最低地上高</div><div class="spec-value">250mm（エアサス最大）</div></div>
+      </div>
+      <div class="ratings">
+        <div class="rating-row">
+          <div class="rating-label">威信度</div>
+          <div class="stars">
+            <div class="star on"></div><div class="star on"></div><div class="star on"></div><div class="star on"></div><div class="star on"></div>
+          </div>
+        </div>
+        <div class="rating-row">
+          <div class="rating-label">信頼性</div>
+          <div class="stars">
+            <div class="star green-on"></div><div class="star green-on"></div><div class="star off"></div><div class="star off"></div><div class="star off"></div>
+          </div>
+        </div>
+        <div class="rating-row">
+          <div class="rating-label">道路適性</div>
+          <div class="stars">
+            <div class="star blue-on"></div><div class="star blue-on"></div><div class="star blue-on"></div><div class="star blue-on"></div><div class="star off"></div>
+          </div>
+        </div>
+        <div class="rating-row">
+          <div class="rating-label">コストパフォーマンス</div>
+          <div class="stars">
+            <div class="star red-on"></div><div class="star red-on"></div><div class="star off"></div><div class="star off"></div><div class="star off"></div>
+          </div>
+        </div>
+      </div>
+      <div class="notes">
+        <div class="note-pro">✓ 最高峰の威信度・ナイジェリアでの格付けはトップクラス</div>
+        <div class="note-pro">✓ 乗り心地・インテリアの豪華さは最上位</div>
+        <div class="note-con">⚠ 信頼性・故障率が課題（電装系・エアサス）</div>
+        <div class="note-con">⚠ 修理コストが非常に高い・部品入手が困難な場合も</div>
+        <div class="note-con">△ 中古は整備歴の確認が必須</div>
+      </div>
+      <a href="https://jiji.ng/cars/range-rover" target="_blank" class="jiji-link">jiji.ng で探す →</a>
+    </div>
+  </div>
+
+  <!-- 9. Acura MDX -->
+  <div class="card" data-tier="budget" data-brand="toyota">
+    <img class="card-img"
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/2022_Acura_MDX_SH-AWD_%28US%29%2C_front_3.22.21.jpg/800px-2022_Acura_MDX_SH-AWD_%28US%29%2C_front_3.22.21.jpg"
+      alt="Acura MDX"
+      onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="card-img-placeholder" style="display:none">🚙</div>
+    <div class="card-body">
+      <div class="card-header">
+        <div>
+          <div class="car-brand">Acura (Honda)</div>
+          <div class="car-name">MDX</div>
+        </div>
+        <span class="tier-badge tier-budget">エントリー</span>
+      </div>
+      <div class="price-range">₦3M 〜 ₦20M <span>（中古・2007〜2020年式）</span></div>
+      <div class="specs-grid">
+        <div class="spec-item"><div class="spec-label">エンジン</div><div class="spec-value">3.5L V6 / 3.0L TT</div></div>
+        <div class="spec-item"><div class="spec-label">馬力</div><div class="spec-value">290〜355hp</div></div>
+        <div class="spec-item"><div class="spec-label">定員</div><div class="spec-value">7名</div></div>
+        <div class="spec-item"><div class="spec-label">燃料</div><div class="spec-value">ガソリン</div></div>
+        <div class="spec-item"><div class="spec-label">駆動</div><div class="spec-value">FWD / SH-AWD</div></div>
+        <div class="spec-item"><div class="spec-label">最低地上高</div><div class="spec-value">190mm</div></div>
+      </div>
+      <div class="ratings">
+        <div class="rating-row">
+          <div class="rating-label">威信度</div>
+          <div class="stars">
+            <div class="star on"></div><div class="star on"></div><div class="star on"></div><div class="star off"></div><div class="star off"></div>
+          </div>
+        </div>
+        <div class="rating-row">
+          <div class="rating-label">信頼性</div>
+          <div class="stars">
+            <div class="star green-on"></div><div class="star green-on"></div><div class="star green-on"></div><div class="star green-on"></div><div class="star off"></div>
+          </div>
+        </div>
+        <div class="rating-row">
+          <div class="rating-label">道路適性</div>
+          <div class="stars">
+            <div class="star blue-on"></div><div class="star blue-on"></div><div class="star blue-on"></div><div class="star off"></div><div class="star off"></div>
+          </div>
+        </div>
+        <div class="rating-row">
+          <div class="rating-label">コストパフォーマンス</div>
+          <div class="stars">
+            <div class="star red-on"></div><div class="star red-on"></div><div class="star red-on"></div><div class="star red-on"></div><div class="star red-on"></div>
+          </div>
+        </div>
+      </div>
+      <div class="notes">
+        <div class="note-pro">✓ 最安値帯で始められる（₦3M〜）</div>
+        <div class="note-pro">✓ ホンダエンジンで信頼性高め</div>
+        <div class="note-pro">✓ 7人乗りで家族向け送迎に適合</div>
+        <div class="note-con">△ 地上高が低く悪路は苦手</div>
+        <div class="note-con">△ ハイヤーとしての格は低い</div>
+      </div>
+      <a href="https://jiji.ng/cars/acura-mdx" target="_blank" class="jiji-link">jiji.ng で探す →</a>
+    </div>
+  </div>
+
+  <!-- 10. Honda Pilot -->
+  <div class="card" data-tier="budget" data-brand="toyota">
+    <img class="card-img"
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/2023_Honda_Pilot_Elite_%28US%29%2C_front_11.13.22.jpg/800px-2023_Honda_Pilot_Elite_%28US%29%2C_front_11.13.22.jpg"
+      alt="Honda Pilot"
+      onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="card-img-placeholder" style="display:none">🚙</div>
+    <div class="card-body">
+      <div class="card-header">
+        <div>
+          <div class="car-brand">Honda</div>
+          <div class="car-name">Pilot</div>
+        </div>
+        <span class="tier-badge tier-budget">エントリー</span>
+      </div>
+      <div class="price-range">₦2.4M 〜 ₦25M <span>（中古・2007〜2022年式）</span></div>
+      <div class="specs-grid">
+        <div class="spec-item"><div class="spec-label">エンジン</div><div class="spec-value">3.5L V6</div></div>
+        <div class="spec-item"><div class="spec-label">馬力</div><div class="spec-value">280〜285hp</div></div>
+        <div class="spec-item"><div class="spec-label">定員</div><div class="spec-value">7〜8名</div></div>
+        <div class="spec-item"><div class="spec-label">燃料</div><div class="spec-value">ガソリン</div></div>
+        <div class="spec-item"><div class="spec-label">駆動</div><div class="spec-value">FWD / AWD</div></div>
+        <div class="spec-item"><div class="spec-label">最低地上高</div><div class="spec-value">197mm</div></div>
+      </div>
+      <div class="ratings">
+        <div class="rating-row">
+          <div class="rating-label">威信度</div>
+          <div class="stars">
+            <div class="star on"></div><div class="star on"></div><div class="star off"></div><div class="star off"></div><div class="star off"></div>
+          </div>
+        </div>
+        <div class="rating-row">
+          <div class="rating-label">信頼性</div>
+          <div class="stars">
+            <div class="star green-on"></div><div class="star green-on"></div><div class="star green-on"></div><div class="star green-on"></div><div class="star off"></div>
+          </div>
+        </div>
+        <div class="rating-row">
+          <div class="rating-label">道路適性</div>
+          <div class="stars">
+            <div class="star blue-on"></div><div class="star blue-on"></div><div class="star blue-on"></div><div class="star off"></div><div class="star off"></div>
+          </div>
+        </div>
+        <div class="rating-row">
+          <div class="rating-label">コストパフォーマンス</div>
+          <div class="stars">
+            <div class="star red-on"></div><div class="star red-on"></div><div class="star red-on"></div><div class="star red-on"></div><div class="star red-on"></div>
+          </div>
+        </div>
+      </div>
+      <div class="notes">
+        <div class="note-pro">✓ 最安値・初期投資最小（₦2.4M〜）</div>
+        <div class="note-pro">✓ 8人乗りで最大定員</div>
+        <div class="note-pro">✓ ホンダの高い信頼性</div>
+        <div class="note-con">△ ハイヤーとしての格は最低水準</div>
+        <div class="note-con">△ 都市部の舗装路向き</div>
+      </div>
+      <a href="https://jiji.ng/cars/honda-pilot" target="_blank" class="jiji-link">jiji.ng で探す →</a>
+    </div>
+  </div>
+
+  <!-- 11. Mercedes-Benz GLE -->
+  <div class="card" data-tier="mid" data-brand="euro">
+    <img class="card-img"
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/2020_Mercedes-Benz_GLE_450_4MATIC_%28US%29%2C_front_8.11.19.jpg/800px-2020_Mercedes-Benz_GLE_450_4MATIC_%28US%29%2C_front_8.11.19.jpg"
+      alt="Mercedes-Benz GLE"
+      onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="card-img-placeholder" style="display:none">🚙</div>
+    <div class="card-body">
+      <div class="card-header">
+        <div>
+          <div class="car-brand">Mercedes-Benz</div>
+          <div class="car-name">GLE-Class</div>
+        </div>
+        <span class="tier-badge tier-mid">ミッドレンジ</span>
+      </div>
+      <div class="price-range">₦10M 〜 ₦50M <span>（中古・2015〜2022年式）</span></div>
+      <div class="specs-grid">
+        <div class="spec-item"><div class="spec-label">エンジン</div><div class="spec-value">3.0L I6T / 5.5L V8</div></div>
+        <div class="spec-item"><div class="spec-label">馬力</div><div class="spec-value">255〜577hp（AMG含む）</div></div>
+        <div class="spec-item"><div class="spec-label">定員</div><div class="spec-value">5〜7名</div></div>
+        <div class="spec-item"><div class="spec-label">燃料</div><div class="spec-value">ガソリン／ディーゼル</div></div>
+        <div class="spec-item"><div class="spec-label">駆動</div><div class="spec-value">4MATIC（AWD）</div></div>
+        <div class="spec-item"><div class="spec-label">最低地上高</div><div class="spec-value">185〜235mm</div></div>
+      </div>
+      <div class="ratings">
+        <div class="rating-row">
+          <div class="rating-label">威信度</div>
+          <div class="stars">
+            <div class="star on"></div><div class="star on"></div><div class="star on"></div><div class="star on"></div><div class="star off"></div>
+          </div>
+        </div>
+        <div class="rating-row">
+          <div class="rating-label">信頼性</div>
+          <div class="stars">
+            <div class="star green-on"></div><div class="star green-on"></div><div class="star green-on"></div><div class="star off"></div><div class="star off"></div>
+          </div>
+        </div>
+        <div class="rating-row">
+          <div class="rating-label">道路適性</div>
+          <div class="stars">
+            <div class="star blue-on"></div><div class="star blue-on"></div><div class="star blue-on"></div><div class="star off"></div><div class="star off"></div>
+          </div>
+        </div>
+        <div class="rating-row">
+          <div class="rating-label">コストパフォーマンス</div>
+          <div class="stars">
+            <div class="star red-on"></div><div class="star red-on"></div><div class="star red-on"></div><div class="star off"></div><div class="star off"></div>
+          </div>
+        </div>
+      </div>
+      <div class="notes">
+        <div class="note-pro">✓ メルセデスブランドで高い威信度</div>
+        <div class="note-pro">✓ 中古価格帯が比較的アクセスしやすい</div>
+        <div class="note-con">⚠ 維持費・修理費がトヨタ系より高い</div>
+        <div class="note-con">△ 部品供給が限られる場合も</div>
+      </div>
+      <a href="https://jiji.ng/cars/mercedes-benz-gle-class" target="_blank" class="jiji-link">jiji.ng で探す →</a>
+    </div>
+  </div>
+
+  <!-- 12. Toyota Fortuner -->
+  <div class="card" data-tier="mid" data-brand="toyota">
+    <img class="card-img"
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/2020_Toyota_Fortuner_%28AN160R%29_GX_4x4_wagon_%282021-07-07%29_01.jpg/800px-2020_Toyota_Fortuner_%28AN160R%29_GX_4x4_wagon_%282021-07-07%29_01.jpg"
+      alt="Toyota Fortuner"
+      onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="card-img-placeholder" style="display:none">🚙</div>
+    <div class="card-body">
+      <div class="card-header">
+        <div>
+          <div class="car-brand">Toyota</div>
+          <div class="car-name">Fortuner</div>
+        </div>
+        <span class="tier-badge tier-mid">ミッドレンジ</span>
+      </div>
+      <div class="price-range">₦13M 〜 ₦75M <span>（中古〜新車・2015〜2025年式）</span></div>
+      <div class="specs-grid">
+        <div class="spec-item"><div class="spec-label">エンジン</div><div class="spec-value">2.7L Gas / 2.8L Diesel</div></div>
+        <div class="spec-item"><div class="spec-label">馬力</div><div class="spec-value">166〜204hp</div></div>
+        <div class="spec-item"><div class="spec-label">定員</div><div class="spec-value">7名</div></div>
+        <div class="spec-item"><div class="spec-label">燃料</div><div class="spec-value">ガソリン／ディーゼル</div></div>
+        <div class="spec-item"><div class="spec-label">駆動</div><div class="spec-value">4WD（パートタイム）</div></div>
+        <div class="spec-item"><div class="spec-label">最低地上高</div><div class="spec-value">279mm</div></div>
+      </div>
+      <div class="ratings">
+        <div class="rating-row">
+          <div class="rating-label">威信度</div>
+          <div class="stars">
+            <div class="star on"></div><div class="star on"></div><div class="star on"></div><div class="star off"></div><div class="star off"></div>
+          </div>
+        </div>
+        <div class="rating-row">
+          <div class="rating-label">信頼性</div>
+          <div class="stars">
+            <div class="star green-on"></div><div class="star green-on"></div><div class="star green-on"></div><div class="star green-on"></div><div class="star green-on"></div>
+          </div>
+        </div>
+        <div class="rating-row">
+          <div class="rating-label">道路適性</div>
+          <div class="stars">
+            <div class="star blue-on"></div><div class="star blue-on"></div><div class="star blue-on"></div><div class="star blue-on"></div><div class="star blue-on"></div>
+          </div>
+        </div>
+        <div class="rating-row">
+          <div class="rating-label">コストパフォーマンス</div>
+          <div class="stars">
+            <div class="star red-on"></div><div class="star red-on"></div><div class="star red-on"></div><div class="star red-on"></div><div class="star off"></div>
+          </div>
+        </div>
+      </div>
+      <div class="notes">
+        <div class="note-pro">✓ 最高地上高（279mm）でナイジェリア悪路に最適</div>
+        <div class="note-pro">✓ ハイラックスベースで絶大な信頼性</div>
+        <div class="note-pro">✓ ディーゼルは低燃費・長距離に有利</div>
+        <div class="note-con">△ パワーが控えめ（高速道路での余裕は少な目）</div>
+      </div>
+      <a href="https://jiji.ng/cars/toyota-fortuner" target="_blank" class="jiji-link">jiji.ng で探す →</a>
+    </div>
+  </div>
+
+  <!-- 13. Infiniti QX80 -->
+  <div class="card" data-tier="premium" data-brand="toyota">
+    <img class="card-img"
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/2023_Infiniti_QX80_Sensory%2C_front_12.12.22.jpg/800px-2023_Infiniti_QX80_Sensory%2C_front_12.12.22.jpg"
+      alt="Infiniti QX80"
+      onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="card-img-placeholder" style="display:none">🚙</div>
+    <div class="card-body">
+      <div class="card-header">
+        <div>
+          <div class="car-brand">Infiniti (Nissan)</div>
+          <div class="car-name">QX80</div>
+        </div>
+        <span class="tier-badge tier-premium">プレミアム</span>
+      </div>
+      <div class="price-range">₦35M 〜 ₦160M <span>（中古〜新車・2015〜2025年式）</span></div>
+      <div class="specs-grid">
+        <div class="spec-item"><div class="spec-label">エンジン</div><div class="spec-value">5.6L V8 / 3.5L TTV6</div></div>
+        <div class="spec-item"><div class="spec-label">馬力</div><div class="spec-value">400〜450hp</div></div>
+        <div class="spec-item"><div class="spec-label">定員</div><div class="spec-value">8名</div></div>
+        <div class="spec-item"><div class="spec-label">燃料</div><div class="spec-value">ガソリン</div></div>
+        <div class="spec-item"><div class="spec-label">駆動</div><div class="spec-value">AWD</div></div>
+        <div class="spec-item"><div class="spec-label">最低地上高</div><div class="spec-value">233mm</div></div>
+      </div>
+      <div class="ratings">
+        <div class="rating-row">
+          <div class="rating-label">威信度</div>
+          <div class="stars">
+            <div class="star on"></div><div class="star on"></div><div class="star on"></div><div class="star on"></div><div class="star off"></div>
+          </div>
+        </div>
+        <div class="rating-row">
+          <div class="rating-label">信頼性</div>
+          <div class="stars">
+            <div class="star green-on"></div><div class="star green-on"></div><div class="star green-on"></div><div class="star off"></div><div class="star off"></div>
+          </div>
+        </div>
+        <div class="rating-row">
+          <div class="rating-label">道路適性</div>
+          <div class="stars">
+            <div class="star blue-on"></div><div class="star blue-on"></div><div class="star blue-on"></div><div class="star blue-on"></div><div class="star off"></div>
+          </div>
+        </div>
+        <div class="rating-row">
+          <div class="rating-label">コストパフォーマンス</div>
+          <div class="stars">
+            <div class="star red-on"></div><div class="star red-on"></div><div class="star red-on"></div><div class="star off"></div><div class="star off"></div>
+          </div>
+        </div>
+      </div>
+      <div class="notes">
+        <div class="note-pro">✓ 8人乗りの大型フルサイズSUV</div>
+        <div class="note-pro">✓ 存在感のあるデザイン・高い威信度</div>
+        <div class="note-con">△ ナイジェリアでのブランド認知度はレクサス・Benz系より低い</div>
+        <div class="note-con">△ 部品入手がやや困難な場合も</div>
+      </div>
+      <a href="https://jiji.ng/cars/infiniti-qx80" target="_blank" class="jiji-link">jiji.ng で探す →</a>
+    </div>
+  </div>
+
+  <!-- 14. Mercedes G-Class -->
+  <div class="card" data-tier="ultra" data-brand="euro">
+    <img class="card-img"
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/2019_Mercedes-Benz_G350d_%28W463%29_wagon_%282019-09-25%29_01.jpg/800px-2019_Mercedes-Benz_G350d_%28W463%29_wagon_%282019-09-25%29_01.jpg"
+      alt="Mercedes G-Class"
+      onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="card-img-placeholder" style="display:none">🚙</div>
+    <div class="card-body">
+      <div class="card-header">
+        <div>
+          <div class="car-brand">Mercedes-Benz</div>
+          <div class="car-name">G-Class (G-Wagon)</div>
+        </div>
+        <span class="tier-badge tier-ultra">ウルトラ</span>
+      </div>
+      <div class="price-range">₦30M 〜 ₦480M <span>（中古〜新車・2015〜2025年式）</span></div>
+      <div class="specs-grid">
+        <div class="spec-item"><div class="spec-label">エンジン</div><div class="spec-value">4.0L V8 Biturbo (G63)</div></div>
+        <div class="spec-item"><div class="spec-label">馬力</div><div class="spec-value">585hp（G63 AMG）</div></div>
+        <div class="spec-item"><div class="spec-label">定員</div><div class="spec-value">5名</div></div>
+        <div class="spec-item"><div class="spec-label">燃料</div><div class="spec-value">ガソリン</div></div>
+        <div class="spec-item"><div class="spec-label">駆動</div><div class="spec-value">4MATIC（AWD・ロック3基）</div></div>
+        <div class="spec-item"><div class="spec-label">最低地上高</div><div class="spec-value">248mm</div></div>
+      </div>
+      <div class="ratings">
+        <div class="rating-row">
+          <div class="rating-label">威信度</div>
+          <div class="stars">
+            <div class="star on"></div><div class="star on"></div><div class="star on"></div><div class="star on"></div><div class="star on"></div>
+          </div>
+        </div>
+        <div class="rating-row">
+          <div class="rating-label">信頼性</div>
+          <div class="stars">
+            <div class="star green-on"></div><div class="star green-on"></div><div class="star green-on"></div><div class="star off"></div><div class="star off"></div>
+          </div>
+        </div>
+        <div class="rating-row">
+          <div class="rating-label">道路適性</div>
+          <div class="stars">
+            <div class="star blue-on"></div><div class="star blue-on"></div><div class="star blue-on"></div><div class="star blue-on"></div><div class="star blue-on"></div>
+          </div>
+        </div>
+        <div class="rating-row">
+          <div class="rating-label">コストパフォーマンス</div>
+          <div class="stars">
+            <div class="star red-on"></div><div class="star off"></div><div class="star off"></div><div class="star off"></div><div class="star off"></div>
+          </div>
+        </div>
+      </div>
+      <div class="notes">
+        <div class="note-pro">✓ ナイジェリアで芸能人・政治家御用達の最高ステータスシンボル</div>
+        <div class="note-pro">✓ G63 AMGは最強の存在感</div>
+        <div class="note-con">⚠ 新車は₦480M〜で超高額</div>
+        <div class="note-con">⚠ 維持費・修理費が非常に高い</div>
+        <div class="note-con">△ 5人乗りのみ（乗客定員が少ない）</div>
+      </div>
+      <a href="https://jiji.ng/cars/mercedes-benz-g-class" target="_blank" class="jiji-link">jiji.ng で探す →</a>
+    </div>
+  </div>
+
+  <!-- 15. Mercedes GLS -->
+  <div class="card" data-tier="premium" data-brand="euro">
+    <img class="card-img"
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/2020_Mercedes-Benz_GLS_450_4MATIC_%28US%29%2C_front_8.11.19.jpg/800px-2020_Mercedes-Benz_GLS_450_4MATIC_%28US%29%2C_front_8.11.19.jpg"
+      alt="Mercedes GLS"
+      onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="card-img-placeholder" style="display:none">🚙</div>
+    <div class="card-body">
+      <div class="card-header">
+        <div>
+          <div class="car-brand">Mercedes-Benz</div>
+          <div class="car-name">GLS-Class</div>
+        </div>
+        <span class="tier-badge tier-premium">プレミアム</span>
+      </div>
+      <div class="price-range">₦28M 〜 ₦100M <span>（中古・2016〜2023年式）</span></div>
+      <div class="specs-grid">
+        <div class="spec-item"><div class="spec-label">エンジン</div><div class="spec-value">3.0L I6T / 4.0L V8</div></div>
+        <div class="spec-item"><div class="spec-label">馬力</div><div class="spec-value">362〜630hp（GLS63含む）</div></div>
+        <div class="spec-item"><div class="spec-label">定員</div><div class="spec-value">7名</div></div>
+        <div class="spec-item"><div class="spec-label">燃料</div><div class="spec-value">ガソリン／ディーゼル</div></div>
+        <div class="spec-item"><div class="spec-label">駆動</div><div class="spec-value">4MATIC（AWD）</div></div>
+        <div class="spec-item"><div class="spec-label">最低地上高</div><div class="spec-value">193〜270mm（エアサス）</div></div>
+      </div>
+      <div class="ratings">
+        <div class="rating-row">
+          <div class="rating-label">威信度</div>
+          <div class="stars">
+            <div class="star on"></div><div class="star on"></div><div class="star on"></div><div class="star on"></div><div class="star on"></div>
+          </div>
+        </div>
+        <div class="rating-row">
+          <div class="rating-label">信頼性</div>
+          <div class="stars">
+            <div class="star green-on"></div><div class="star green-on"></div><div class="star green-on"></div><div class="star off"></div><div class="star off"></div>
+          </div>
+        </div>
+        <div class="rating-row">
+          <div class="rating-label">道路適性</div>
+          <div class="stars">
+            <div class="star blue-on"></div><div class="star blue-on"></div><div class="star blue-on"></div><div class="star off"></div><div class="star off"></div>
+          </div>
+        </div>
+        <div class="rating-row">
+          <div class="rating-label">コストパフォーマンス</div>
+          <div class="stars">
+            <div class="star red-on"></div><div class="star red-on"></div><div class="star off"></div><div class="star off"></div><div class="star off"></div>
+          </div>
+        </div>
+      </div>
+      <div class="notes">
+        <div class="note-pro">✓ 7人乗りの大型高級SUV・VIPグループ送迎に最適</div>
+        <div class="note-pro">✓ メルセデス最上位SUVとして最高の威信</div>
+        <div class="note-con">⚠ 維持費・修理費が非常に高い</div>
+        <div class="note-con">⚠ エアサスの故障リスクに注意</div>
+      </div>
+      <a href="https://jiji.ng/cars/mercedes-benz-gls-class" target="_blank" class="jiji-link">jiji.ng で探す →</a>
+    </div>
+  </div>
+
+  <!-- 16. Porsche Cayenne -->
+  <div class="card" data-tier="mid" data-brand="euro">
+    <img class="card-img"
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/2019_Porsche_Cayenne_%28E3%29_wagon_%282019-06-21%29_01.jpg/800px-2019_Porsche_Cayenne_%28E3%29_wagon_%282019-06-21%29_01.jpg"
+      alt="Porsche Cayenne"
+      onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="card-img-placeholder" style="display:none">🚙</div>
+    <div class="card-body">
+      <div class="card-header">
+        <div>
+          <div class="car-brand">Porsche</div>
+          <div class="car-name">Cayenne</div>
+        </div>
+        <span class="tier-badge tier-mid">ミッドレンジ</span>
+      </div>
+      <div class="price-range">₦5M 〜 ₦100M <span>（中古〜新車・2010〜2024年式）</span></div>
+      <div class="specs-grid">
+        <div class="spec-item"><div class="spec-label">エンジン</div><div class="spec-value">3.0L V6T / 4.0L V8T</div></div>
+        <div class="spec-item"><div class="spec-label">馬力</div><div class="spec-value">340〜670hp（Turbo GT）</div></div>
+        <div class="spec-item"><div class="spec-label">定員</div><div class="spec-value">5名</div></div>
+        <div class="spec-item"><div class="spec-label">燃料</div><div class="spec-value">ガソリン／PHEV</div></div>
+        <div class="spec-item"><div class="spec-label">駆動</div><div class="spec-value">AWD（PTM）</div></div>
+        <div class="spec-item"><div class="spec-label">最低地上高</div><div class="spec-value">195〜250mm（エアサス）</div></div>
+      </div>
+      <div class="ratings">
+        <div class="rating-row">
+          <div class="rating-label">威信度</div>
+          <div class="stars">
+            <div class="star on"></div><div class="star on"></div><div class="star on"></div><div class="star on"></div><div class="star off"></div>
+          </div>
+        </div>
+        <div class="rating-row">
+          <div class="rating-label">信頼性</div>
+          <div class="stars">
+            <div class="star green-on"></div><div class="star green-on"></div><div class="star green-on"></div><div class="star off"></div><div class="star off"></div>
+          </div>
+        </div>
+        <div class="rating-row">
+          <div class="rating-label">道路適性</div>
+          <div class="stars">
+            <div class="star blue-on"></div><div class="star blue-on"></div><div class="star blue-on"></div><div class="star off"></div><div class="star off"></div>
+          </div>
+        </div>
+        <div class="rating-row">
+          <div class="rating-label">コストパフォーマンス</div>
+          <div class="stars">
+            <div class="star red-on"></div><div class="star red-on"></div><div class="star red-on"></div><div class="star off"></div><div class="star off"></div>
+          </div>
+        </div>
+      </div>
+      <div class="notes">
+        <div class="note-pro">✓ ポルシェブランドで高い威信度・スポーティなイメージ</div>
+        <div class="note-pro">✓ 古めの中古は安価（₦5M〜）</div>
+        <div class="note-con">⚠ 維持費・修理費が非常に高い（欧州車の中でも特に）</div>
+        <div class="note-con">△ 5人乗りのみ・定員が少ない</div>
+        <div class="note-con">△ エアサスの故障リスク</div>
+      </div>
+      <a href="https://jiji.ng/cars/porsche-cayenne" target="_blank" class="jiji-link">jiji.ng で探す →</a>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <p>データ出典：jiji.ng、234drive.com、rynoauto.com、carlots.ng ／ 価格はjiji.ng掲載データをもとにした目安（2025年5月時点）</p>
+  <p style="margin-top:8px">為替レート：1USD ≈ ₦1,600〜1,800 ／ 実際の購入時は現地ディーラーにて最新価格を確認してください</p>
+</footer>
+
+<script>
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const cards = document.querySelectorAll('.card');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const f = btn.dataset.filter;
+      cards.forEach(card => {
+        if (f === 'all') {
+          card.classList.remove('hidden');
+        } else if (f === 'toyota') {
+          card.dataset.brand === 'toyota' ? card.classList.remove('hidden') : card.classList.add('hidden');
+        } else if (f === 'euro') {
+          card.dataset.brand === 'euro' ? card.classList.remove('hidden') : card.classList.add('hidden');
+        } else {
+          card.dataset.tier === f ? card.classList.remove('hidden') : card.classList.add('hidden');
+        }
+      });
+    });
+  });
+</script>
+</body>
+</html>
