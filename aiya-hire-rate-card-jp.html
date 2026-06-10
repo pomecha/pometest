@@ -9,65 +9,47 @@
 <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Noto+Sans+JP:wght@400;500&family=Shippori+Mincho:wght@500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root{
-    --ink:#1A1C1F;
-    --paper:#FAF8F3;
-    --card:#FFFFFF;
-    --brass:#A07C42;
-    --brass-soft:#C7A572;
-    --muted:#6B6862;
-    --hair:rgba(26,28,31,0.12);
-    --hair-strong:rgba(26,28,31,0.22);
-    --latin:'Marcellus',Georgia,serif;
-    --display:'Shippori Mincho',serif;
-    --body:'Noto Sans JP',-apple-system,sans-serif;
-    --mono:'IBM Plex Mono',ui-monospace,monospace;
+    --ink:#1A1C1F;--paper:#FAF8F3;--card:#FFFFFF;--brass:#A07C42;--brass-soft:#C7A572;
+    --muted:#6B6862;--hair:rgba(26,28,31,0.12);--hair-strong:rgba(26,28,31,0.22);
+    --latin:'Marcellus',Georgia,serif;--display:'Shippori Mincho',serif;--body:'Noto Sans JP',-apple-system,sans-serif;--mono:'IBM Plex Mono',ui-monospace,monospace;
   }
   *{box-sizing:border-box;margin:0;padding:0;}
   html{-webkit-text-size-adjust:100%;}
-  body{
-    background:var(--paper);
-    color:var(--ink);
-    font-family:var(--body);
-    font-size:15px;
-    line-height:1.75;
-    -webkit-font-smoothing:antialiased;
-  }
-  .sheet{max-width:860px;margin:0 auto;}
-
+  body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.75;-webkit-font-smoothing:antialiased;}
+  .sheet{max-width:820px;margin:0 auto;}
   .masthead{background:var(--ink);color:var(--paper);padding:54px 48px 48px;}
   .eyebrow{font-size:12px;letter-spacing:0.22em;color:var(--brass-soft);font-weight:500;}
-  .placard{
-    margin-top:26px;border:1px solid rgba(250,248,243,0.35);border-radius:2px;
-    padding:30px 34px;display:inline-block;min-width:min(420px,100%);
-  }
+  .placard{margin-top:26px;border:1px solid rgba(250,248,243,0.35);border-radius:2px;padding:30px 34px;display:inline-block;min-width:min(420px,100%);}
   .placard .served{font-size:11px;letter-spacing:0.24em;color:rgba(250,248,243,0.55);margin-bottom:14px;}
   .wordmark{font-family:var(--latin);font-size:54px;line-height:0.95;letter-spacing:0.18em;color:var(--paper);}
   .wordmark .sub{display:block;font-size:18px;letter-spacing:0.46em;color:var(--brass-soft);margin-top:10px;}
   .lede{margin-top:30px;max-width:560px;font-size:15.5px;line-height:1.95;color:rgba(250,248,243,0.82);}
   .lede .accent{color:var(--paper);}
-
-  .body{padding:46px 48px 30px;}
-  .section{padding:30px 0;border-top:1px solid var(--hair);}
-  .section:first-child{border-top:none;padding-top:8px;}
-  .sec-head{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin-bottom:18px;flex-wrap:wrap;}
+  .body{padding:46px 48px 34px;}
+  .section{padding:28px 0;border-top:1px solid var(--hair);}
+  .section:first-child{border-top:none;padding-top:6px;}
+  .sec-head{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin-bottom:16px;flex-wrap:wrap;}
   .sec-eyebrow{font-size:11px;letter-spacing:0.18em;color:var(--brass);font-weight:500;}
   .sec-title{font-family:var(--display);font-size:25px;font-weight:600;letter-spacing:0.04em;margin-top:6px;}
   .sec-note{font-size:13px;color:var(--muted);max-width:320px;text-align:right;line-height:1.7;}
-
   table{width:100%;border-collapse:collapse;}
   th,td{text-align:left;padding:11px 0;border-bottom:1px solid var(--hair);vertical-align:baseline;}
-  thead th{font-size:11px;letter-spacing:0.1em;color:var(--muted);font-weight:500;border-bottom:1px solid var(--hair-strong);padding-bottom:8px;}
-  th.num,td.num{text-align:right;font-family:var(--mono);font-weight:500;white-space:nowrap;}
   td.name{font-weight:500;padding-right:18px;}
-  td.desc{color:var(--muted);font-size:13.5px;}
+  td.num{text-align:right;font-family:var(--mono);font-weight:500;white-space:nowrap;}
   tr:last-child td{border-bottom:none;}
-  .price{font-family:var(--mono);font-weight:500;}
-
-  .featured{background:var(--card);border:1px solid var(--hair-strong);border-left:3px solid var(--brass);border-radius:3px;padding:24px 26px;}
-  .featured .sec-title{margin-top:0;}
-  .tag{display:inline-block;font-size:11px;letter-spacing:0.12em;color:var(--brass);border:1px solid var(--brass);border-radius:2px;padding:3px 10px;font-weight:500;}
-
-  .panels{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid var(--hair-strong);}
+  .rough{display:flex;justify-content:space-between;gap:14px;padding:10px 0;border-bottom:1px solid var(--hair);}
+  .rough:last-of-type{border-bottom:none;}
+  .rough .l{font-weight:500;}
+  .rough .l small{display:block;color:var(--muted);font-weight:400;font-size:13px;}
+  .rough .r{font-family:var(--mono);font-weight:500;white-space:nowrap;}
+  .alsolist{font-size:14.5px;color:var(--ink);line-height:2.1;}
+  .alsolist b{font-weight:500;}
+  .include-band{background:var(--card);border-top:2px solid var(--brass);padding:32px 48px;}
+  .include-band h3{font-family:var(--display);font-size:21px;font-weight:500;letter-spacing:0.04em;margin-bottom:18px;}
+  .include-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;}
+  .include-item{font-size:14px;line-height:1.6;}
+  .include-item .ic{font-family:var(--display);font-size:12px;letter-spacing:0.12em;color:var(--brass);display:block;margin-bottom:6px;font-weight:500;}
+  .panels{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid var(--hair);}
   .panel{padding:28px 48px;}
   .panel:first-child{border-right:1px solid var(--hair);}
   .panel h3{font-family:var(--display);font-size:18px;font-weight:500;letter-spacing:0.04em;margin-bottom:14px;}
@@ -75,12 +57,10 @@
   .kv:last-child{border-bottom:none;}
   .kv .k{color:var(--muted);}
   .kv .v{font-family:var(--mono);font-weight:500;white-space:nowrap;}
-  .incl{list-style:none;}
-  .incl li{padding:7px 0;font-size:14px;border-bottom:1px dotted var(--hair);display:flex;gap:10px;}
-  .incl li:last-child{border-bottom:none;}
-  .incl li::before{content:"—";color:var(--brass);}
-  .terms{font-size:13.5px;color:var(--muted);line-height:1.85;}
-
+  .steps{list-style:none;counter-reset:s;}
+  .steps li{counter-increment:s;padding:8px 0 8px 34px;position:relative;font-size:14px;border-bottom:1px dotted var(--hair);}
+  .steps li:last-child{border-bottom:none;}
+  .steps li::before{content:counter(s);position:absolute;left:0;top:9px;width:22px;height:22px;border:1px solid var(--brass);border-radius:50%;color:var(--brass);font-family:var(--mono);font-size:12px;display:flex;align-items:center;justify-content:center;}
   .contact{background:var(--ink);color:var(--paper);padding:34px 48px;display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;}
   .contact .brand{font-family:var(--latin);font-size:22px;letter-spacing:0.16em;}
   .contact .brand small{display:block;font-family:var(--body);font-size:11px;letter-spacing:0.14em;color:var(--brass-soft);margin-top:8px;}
@@ -88,27 +68,14 @@
   .contact .lines .lbl{color:var(--brass-soft);font-size:11px;letter-spacing:0.1em;margin-right:8px;}
   .contact a{color:var(--paper);text-decoration:none;}
   .finepoint{padding:16px 48px 30px;font-size:11.5px;color:var(--muted);line-height:1.7;}
-
   @media (max-width:620px){
-    .masthead{padding:40px 24px 36px;}
-    .wordmark{font-size:40px;}
-    .body{padding:32px 24px 20px;}
-    .placard{padding:24px 22px;min-width:100%;}
-    .panels{grid-template-columns:1fr;}
-    .panel{padding:24px;}
-    .panel:first-child{border-right:none;border-bottom:1px solid var(--hair);}
-    .contact{padding:28px 24px;}
-    .contact .lines{text-align:left;}
-    .sec-note{text-align:left;}
-    .finepoint{padding:16px 24px 28px;}
+    .masthead{padding:40px 24px 36px;}.wordmark{font-size:40px;}.body{padding:32px 24px 22px;}
+    .placard{padding:24px 22px;min-width:100%;}.include-band{padding:28px 24px;}
+    .include-grid{grid-template-columns:1fr 1fr;}.panels{grid-template-columns:1fr;}
+    .panel{padding:24px;}.panel:first-child{border-right:none;border-bottom:1px solid var(--hair);}
+    .contact{padding:28px 24px;}.contact .lines{text-align:left;}.sec-note{text-align:left;}.finepoint{padding:16px 24px 28px;}
   }
-
-  @media print{
-    body{background:#fff;}
-    .sheet{max-width:none;}
-    .masthead,.contact{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
-    .section,.featured{break-inside:avoid;}
-  }
+  @media print{body{background:#fff;}.sheet{max-width:none;}.masthead,.contact,.include-band{-webkit-print-color-adjust:exact;print-color-adjust:exact;}.section{break-inside:avoid;}}
 </style>
 </head>
 <body>
@@ -120,7 +87,7 @@
       <div class="served">送迎専用車</div>
       <div class="wordmark">AIYA<span class="sub">HIRE</span></div>
     </div>
-    <p class="lede">トヨタ・<span class="accent">ヴェルファイア</span>による専属ショーファーサービス。最大6名様まで。ドライバー・燃料・保険を含む明朗な一律料金で、ラゴス全域を承ります。お客様はお支度だけ、道中のことは私どもにお任せください。</p>
+    <p class="lede">トヨタ・<span class="accent">ヴェルファイア</span>による専属ショーファーサービス。最大6名様まで。ドライバー・燃料・保険を含む一律料金です。空港送迎は定額、その他はメッセージ一本でご確定いただけます。</p>
   </header>
 
   <main class="body">
@@ -128,17 +95,16 @@
     <section class="section">
       <div class="sec-head">
         <div>
-          <div class="sec-eyebrow">空港送迎</div>
+          <div class="sec-eyebrow">定額</div>
           <div class="sec-title">空港トランスファー</div>
         </div>
-        <div class="sec-note">到着ロビーでのお出迎えと、60分の待機を含みます。</div>
+        <div class="sec-note">片道。到着ロビーでのお出迎えと60分の待機を含みます。</div>
       </div>
       <table>
-        <thead><tr><th>ルート</th><th class="num">片道</th><th class="num">往復（同日）</th></tr></thead>
         <tbody>
-          <tr><td class="name">アイランド ｜ VI・イコイ・レッキ Phase 1</td><td class="num">₦55,000</td><td class="num">₦100,000</td></tr>
-          <tr><td class="name">メインランド ｜ イケジャ周辺</td><td class="num">₦40,000</td><td class="num">₦72,000</td></tr>
-          <tr><td class="name">郊外 ｜ アジャ・サンゴテド・レッキ外縁</td><td class="num">₦75,000</td><td class="num">₦135,000</td></tr>
+          <tr><td class="name">イケジャ・本土エリア</td><td class="num">&#8358;40,000</td></tr>
+          <tr><td class="name">アイランド ｜ VI・イコイ・レッキ</td><td class="num">&#8358;55,000</td></tr>
+          <tr><td class="name">その他エリア ｜ アジャ・サンゴテド ほか</td><td class="num">&#8358;75,000</td></tr>
         </tbody>
       </table>
     </section>
@@ -147,125 +113,51 @@
       <div class="sec-head">
         <div>
           <div class="sec-eyebrow">時間制・日極</div>
-          <div class="sec-title">時間チャーター</div>
+          <div class="sec-title">ラゴス市内チャーター</div>
         </div>
-        <div class="sec-note">ラゴス都市圏内。最低3時間より承ります。</div>
+        <div class="sec-note">目安料金です。正式な料金はご予約時に確定します。</div>
       </div>
-      <table>
-        <thead><tr><th>ご利用時間</th><th class="num">料金</th></tr></thead>
-        <tbody>
-          <tr><td class="name">3時間 <span class="desc">— 最低料金</span></td><td class="num">₦67,500</td></tr>
-          <tr><td class="name">半日 <span class="desc">— 4時間</span></td><td class="num">₦90,000</td></tr>
-          <tr><td class="name">6時間</td><td class="num">₦135,000</td></tr>
-          <tr><td class="name">1日 <span class="desc">— 最長10時間</span></td><td class="num">₦150,000</td></tr>
-          <tr><td class="name">延長 1時間ごと</td><td class="num">₦15,000</td></tr>
-        </tbody>
-      </table>
+      <div class="rough"><div class="l">半日<small>5時間程度</small></div><div class="r">&#8358;90,000 〜</div></div>
+      <div class="rough"><div class="l">1日<small>10時間程度</small></div><div class="r">&#8358;150,000 〜</div></div>
     </section>
 
     <section class="section">
       <div class="sec-head">
         <div>
-          <div class="sec-eyebrow">複数日</div>
-          <div class="sec-title">マルチデイ・チャーター</div>
+          <div class="sec-eyebrow">応相談</div>
+          <div class="sec-title">その他のご利用</div>
         </div>
-        <div class="sec-note">長期になるほど、1日あたりの料金が下がります。</div>
+        <div class="sec-note">ご要望をお聞かせください。お見積りします。</div>
       </div>
-      <table>
-        <thead><tr><th>期間</th><th class="num">1日あたり</th><th class="num">例</th></tr></thead>
-        <tbody>
-          <tr><td class="name">2日</td><td class="num">₦135,000</td><td class="num">₦270,000</td></tr>
-          <tr><td class="name">3〜6日</td><td class="num">₦130,000</td><td class="num">5日 · ₦650,000</td></tr>
-          <tr><td class="name">7日以上</td><td class="num">₦120,000</td><td class="num">7日 · ₦840,000</td></tr>
-        </tbody>
-      </table>
-    </section>
-
-    <section class="section">
-      <div class="featured">
-        <div class="sec-head">
-          <div>
-            <div class="tag">おすすめ</div>
-            <div class="sec-title" style="margin-top:12px;">月極リテイナー</div>
-          </div>
-          <div class="sec-note">専属の車とドライバーが、お客様のご予定に合わせて待機します。</div>
-        </div>
-        <table>
-          <thead><tr><th>プラン</th><th class="num">月額</th></tr></thead>
-          <tbody>
-            <tr><td class="name">平日専属 <span class="desc">— 22日・1日10時間</span></td><td class="num">₦2,400,000</td></tr>
-            <tr><td class="name">フル専属 <span class="desc">— 26日・1日12時間</span></td><td class="num">₦3,000,000</td></tr>
-          </tbody>
-        </table>
-        <p style="font-size:13px;color:var(--muted);margin-top:14px;">州外業務は別途申し受けます。割増の適用はございません。</p>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="sec-head">
-        <div>
-          <div class="sec-eyebrow">特別な日に</div>
-          <div class="sec-title">ウェディング・イベント</div>
-        </div>
-        <div class="sec-note">存在感のある一台で、時間どおりにお迎えします。</div>
-      </div>
-      <table>
-        <thead><tr><th>項目</th><th class="num">料金</th></tr></thead>
-        <tbody>
-          <tr><td class="name">イベントパッケージ <span class="desc">— 6時間</span></td><td class="num">₦170,000</td></tr>
-          <tr><td class="name">装飾・レッドカーペット</td><td class="num">+₦40,000</td></tr>
-          <tr><td class="name">延長 1時間ごと</td><td class="num">₦15,000</td></tr>
-        </tbody>
-      </table>
-    </section>
-
-    <section class="section">
-      <div class="sec-head">
-        <div>
-          <div class="sec-eyebrow">ラゴス圏外</div>
-          <div class="sec-title">州外への運行</div>
-        </div>
-        <div class="sec-note">お見積りにて承ります。</div>
-      </div>
-      <table>
-        <tbody>
-          <tr><td class="name">日額</td><td class="desc">時間制・日極／マルチデイの単価に準じます</td></tr>
-          <tr><td class="name">ラゴス圏外の走行</td><td class="desc"><span class="price">₦150</span> / km（往復）</td></tr>
-          <tr><td class="name">ドライバー日当</td><td class="desc"><span class="price">₦25,000</span> / 泊</td></tr>
-          <tr><td class="name">宿泊費</td><td class="desc">実費</td></tr>
-        </tbody>
-      </table>
+      <p class="alsolist"><b>複数日チャーター</b> ｜ <b>月極専属車</b> ｜ <b>ウェディング・イベント</b> ｜ <b>州外への運行</b></p>
     </section>
 
   </main>
 
-  <div class="panels">
-    <div class="panel">
-      <h3>割増・追加料金</h3>
-      <div class="kv"><span class="k">深夜 ｜ 22:00 – 翌5:00</span><span class="v">+20%</span></div>
-      <div class="kv"><span class="k">祝祭日</span><span class="v">+20%</span></div>
-      <div class="kv"><span class="k">追加待機</span><span class="v">₦8,000 / 30分</span></div>
-      <div class="kv"><span class="k">通行料・駐車料</span><span class="v">実費</span></div>
-    </div>
-    <div class="panel">
-      <h3>すべてのご利用に含まれるもの</h3>
-      <ul class="incl">
-        <li>制服着用のプロフェッショナルドライバー</li>
-        <li>燃料（ラゴス都市圏内）</li>
-        <li>商用総合保険</li>
-        <li>ボトル飲料水・Wi-Fi・充電設備</li>
-      </ul>
+  <div class="include-band">
+    <h3>料金に含まれるもの</h3>
+    <div class="include-grid">
+      <div class="include-item"><span class="ic">ドライバー</span>制服着用のプロフェッショナルドライバー</div>
+      <div class="include-item"><span class="ic">燃料</span>ラゴス都市圏内の燃料すべて</div>
+      <div class="include-item"><span class="ic">保険</span>商用総合保険</div>
+      <div class="include-item"><span class="ic">車内設備</span>ボトル飲料水・Wi-Fi・充電</div>
     </div>
   </div>
 
-  <div class="panels" style="border-top:1px solid var(--hair);">
-    <div class="panel" style="border-right:1px solid var(--hair);">
-      <h3>ご予約</h3>
-      <p class="terms">ご予約は前日に再確認のうえ確定いたします。50%のデポジットでお席を確保し、残金は完了時にご精算ください。</p>
+  <div class="panels">
+    <div class="panel">
+      <h3>ご予約の流れ</h3>
+      <ol class="steps">
+        <li>日時・ルートをメッセージでお知らせください</li>
+        <li>料金と空き状況をご確定します</li>
+        <li>デポジット50%でご予約確定</li>
+      </ol>
     </div>
     <div class="panel">
-      <h3>キャンセル規定</h3>
-      <p class="terms">出発の24時間前まで無料。24時間以内は50%、6時間以内および無連絡不参加は全額を申し受けます。</p>
+      <h3>ご利用にあたって</h3>
+      <div class="kv"><span class="k">深夜 ｜ 22:00 – 翌5:00</span><span class="v">+20%</span></div>
+      <div class="kv"><span class="k">通行料・駐車料</span><span class="v">実費</span></div>
+      <div class="kv"><span class="k">キャンセル</span><span class="v">24時間前まで無料</span></div>
     </div>
   </div>
 
@@ -277,7 +169,7 @@
       <div><span class="lbl">Instagram</span><a href="#">@aiya.hire</a></div>
     </div>
   </footer>
-  <p class="finepoint">料金はナイジェリア・ナイラ（₦）表示、2026年有効。個別お見積りの有効期限は48時間です。車両はトヨタ・ヴェルファイア1台のため、同一時間帯のご予約は1件のみ承ります。</p>
+  <p class="finepoint">料金はナイジェリア・ナイラ（&#8358;）表示、2026年有効。車両はトヨタ・ヴェルファイア1台のため、同一時間帯のご予約は1件のみ承ります。</p>
 
 </div>
 </body>
