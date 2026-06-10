@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AIYA Hire — Rate Card</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1A1C1F;
+    --paper:#FAF8F3;
+    --card:#FFFFFF;
+    --brass:#A07C42;
+    --brass-soft:#C7A572;
+    --muted:#6B6862;
+    --hair:rgba(26,28,31,0.12);
+    --hair-strong:rgba(26,28,31,0.22);
+    --display:'Marcellus',Georgia,serif;
+    --body:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+    --mono:'IBM Plex Mono',ui-monospace,monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{-webkit-text-size-adjust:100%;}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--body);
+    font-size:15px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  .sheet{max-width:860px;margin:0 auto;}
+
+  /* Header / hero */
+  .masthead{
+    background:var(--ink);
+    color:var(--paper);
+    padding:54px 48px 48px;
+  }
+  .eyebrow{
+    font-size:11px;letter-spacing:0.28em;text-transform:uppercase;
+    color:var(--brass-soft);font-weight:500;
+  }
+  .placard{
+    margin-top:26px;
+    border:1px solid rgba(250,248,243,0.35);
+    border-radius:2px;
+    padding:30px 34px;
+    display:inline-block;
+    min-width:min(420px,100%);
+  }
+  .placard .served{
+    font-size:10px;letter-spacing:0.32em;text-transform:uppercase;
+    color:rgba(250,248,243,0.55);margin-bottom:14px;
+  }
+  .wordmark{
+    font-family:var(--display);
+    font-size:54px;line-height:0.95;letter-spacing:0.18em;
+    color:var(--paper);
+  }
+  .wordmark .sub{display:block;font-size:18px;letter-spacing:0.46em;color:var(--brass-soft);margin-top:10px;}
+  .lede{
+    margin-top:30px;max-width:520px;
+    font-size:16px;line-height:1.7;color:rgba(250,248,243,0.82);
+  }
+  .lede .accent{color:var(--paper);}
+
+  /* Body */
+  .body{padding:46px 48px 30px;}
+  .section{padding:30px 0;border-top:1px solid var(--hair);}
+  .section:first-child{border-top:none;padding-top:8px;}
+  .sec-head{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin-bottom:18px;flex-wrap:wrap;}
+  .sec-eyebrow{font-size:10px;letter-spacing:0.26em;text-transform:uppercase;color:var(--brass);font-weight:600;}
+  .sec-title{font-family:var(--display);font-size:25px;letter-spacing:0.01em;margin-top:4px;}
+  .sec-note{font-size:13px;color:var(--muted);max-width:300px;text-align:right;}
+
+  table{width:100%;border-collapse:collapse;}
+  th,td{text-align:left;padding:11px 0;border-bottom:1px solid var(--hair);vertical-align:baseline;}
+  thead th{
+    font-size:10px;letter-spacing:0.16em;text-transform:uppercase;
+    color:var(--muted);font-weight:600;border-bottom:1px solid var(--hair-strong);
+    padding-bottom:8px;
+  }
+  th.num,td.num{text-align:right;font-family:var(--mono);font-weight:500;white-space:nowrap;}
+  td.name{font-weight:500;padding-right:18px;}
+  td.desc{color:var(--muted);font-size:13.5px;}
+  tr:last-child td{border-bottom:none;}
+  .price{font-family:var(--mono);font-weight:500;}
+
+  /* Featured monthly */
+  .featured{
+    background:var(--card);
+    border:1px solid var(--hair-strong);
+    border-left:3px solid var(--brass);
+    border-radius:3px;
+    padding:24px 26px;
+  }
+  .featured .sec-title{margin-top:0;}
+  .tag{
+    display:inline-block;font-size:10px;letter-spacing:0.2em;text-transform:uppercase;
+    color:var(--brass);border:1px solid var(--brass);border-radius:2px;
+    padding:3px 9px;font-weight:600;
+  }
+
+  /* Footer panels */
+  .panels{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid var(--hair-strong);}
+  .panel{padding:28px 48px;}
+  .panel:first-child{border-right:1px solid var(--hair);}
+  .panel h3{font-family:var(--display);font-size:18px;font-weight:400;margin-bottom:14px;}
+  .kv{display:flex;justify-content:space-between;gap:14px;padding:7px 0;border-bottom:1px dotted var(--hair);font-size:14px;}
+  .kv:last-child{border-bottom:none;}
+  .kv .k{color:var(--muted);}
+  .kv .v{font-family:var(--mono);font-weight:500;white-space:nowrap;}
+  .incl{list-style:none;}
+  .incl li{padding:7px 0;font-size:14px;border-bottom:1px dotted var(--hair);display:flex;gap:10px;}
+  .incl li:last-child{border-bottom:none;}
+  .incl li::before{content:"—";color:var(--brass);}
+  .terms{font-size:13px;color:var(--muted);line-height:1.7;}
+
+  /* Contact */
+  .contact{
+    background:var(--ink);color:var(--paper);
+    padding:34px 48px;
+    display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;
+  }
+  .contact .brand{font-family:var(--display);font-size:22px;letter-spacing:0.16em;}
+  .contact .brand small{display:block;font-family:var(--body);font-size:11px;letter-spacing:0.24em;text-transform:uppercase;color:var(--brass-soft);margin-top:6px;}
+  .contact .lines{text-align:right;font-size:14px;line-height:1.9;}
+  .contact .lines .lbl{color:var(--brass-soft);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;margin-right:8px;}
+  .contact a{color:var(--paper);text-decoration:none;}
+  .finepoint{padding:16px 48px 30px;font-size:11px;color:var(--muted);letter-spacing:0.02em;}
+
+  @media (max-width:620px){
+    .masthead{padding:40px 24px 36px;}
+    .wordmark{font-size:40px;}
+    .body{padding:32px 24px 20px;}
+    .placard{padding:24px 22px;min-width:100%;}
+    .panels{grid-template-columns:1fr;}
+    .panel{padding:24px;}
+    .panel:first-child{border-right:none;border-bottom:1px solid var(--hair);}
+    .contact{padding:28px 24px;}
+    .contact .lines{text-align:left;}
+    .sec-note{text-align:left;}
+    .finepoint{padding:16px 24px 28px;}
+  }
+
+  @media print{
+    body{background:#fff;}
+    .sheet{max-width:none;}
+    .masthead,.contact{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+    .section{break-inside:avoid;}
+    .featured{break-inside:avoid;}
+  }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <header class="masthead">
+    <div class="eyebrow">Executive chauffeur service · Lagos</div>
+    <div class="placard">
+      <div class="served">Reserved for</div>
+      <div class="wordmark">AIYA<span class="sub">HIRE</span></div>
+    </div>
+    <p class="lede">Private chauffeur service in a <span class="accent">Toyota Vellfire</span>, seating up to six guests. One fully inclusive rate — driver, fuel, insurance — across Lagos. You arrive composed; we handle the road.</p>
+  </header>
+
+  <main class="body">
+
+    <section class="section">
+      <div class="sec-head">
+        <div>
+          <div class="sec-eyebrow">Airport</div>
+          <div class="sec-title">Airport transfers</div>
+        </div>
+        <div class="sec-note">Meet &amp; greet at arrivals and 60 minutes' waiting included.</div>
+      </div>
+      <table>
+        <thead><tr><th>Route</th><th class="num">One-way</th><th class="num">Round trip</th></tr></thead>
+        <tbody>
+          <tr><td class="name">Island — Victoria Island, Ikoyi, Lekki Phase 1</td><td class="num">₦55,000</td><td class="num">₦100,000</td></tr>
+          <tr><td class="name">Mainland — Ikeja &amp; environs</td><td class="num">₦40,000</td><td class="num">₦72,000</td></tr>
+          <tr><td class="name">Far — Ajah, Sangotedo, outer Lekki</td><td class="num">₦75,000</td><td class="num">₦135,000</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="section">
+      <div class="sec-head">
+        <div>
+          <div class="sec-eyebrow">By the hour &amp; day</div>
+          <div class="sec-title">Hourly &amp; daily hire</div>
+        </div>
+        <div class="sec-note">Within Lagos metro. Three-hour minimum.</div>
+      </div>
+      <table>
+        <thead><tr><th>Duration</th><th class="num">Rate</th></tr></thead>
+        <tbody>
+          <tr><td class="name">3 hours <span class="desc">— minimum hire</span></td><td class="num">₦67,500</td></tr>
+          <tr><td class="name">Half day <span class="desc">— 4 hours</span></td><td class="num">₦90,000</td></tr>
+          <tr><td class="name">6 hours</td><td class="num">₦135,000</td></tr>
+          <tr><td class="name">Full day <span class="desc">— up to 10 hours</span></td><td class="num">₦150,000</td></tr>
+          <tr><td class="name">Each additional hour</td><td class="num">₦15,000</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="section">
+      <div class="sec-head">
+        <div>
+          <div class="sec-eyebrow">Multiple days</div>
+          <div class="sec-title">Multi-day hire</div>
+        </div>
+        <div class="sec-note">The longer the booking, the lower the daily rate.</div>
+      </div>
+      <table>
+        <thead><tr><th>Length</th><th class="num">Per day</th><th class="num">Example</th></tr></thead>
+        <tbody>
+          <tr><td class="name">2 days</td><td class="num">₦135,000</td><td class="num">₦270,000</td></tr>
+          <tr><td class="name">3 – 6 days</td><td class="num">₦130,000</td><td class="num">5 days · ₦650,000</td></tr>
+          <tr><td class="name">7 days or more</td><td class="num">₦120,000</td><td class="num">7 days · ₦840,000</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="section">
+      <div class="featured">
+        <div class="sec-head">
+          <div>
+            <div class="tag">Best value</div>
+            <div class="sec-title" style="margin-top:12px;">Monthly retainer</div>
+          </div>
+          <div class="sec-note">A dedicated car and chauffeur, on standby for your schedule.</div>
+        </div>
+        <table>
+          <thead><tr><th>Plan</th><th class="num">Per month</th></tr></thead>
+          <tbody>
+            <tr><td class="name">Weekday dedicated <span class="desc">— 22 days, 10 hrs/day</span></td><td class="num">₦2,400,000</td></tr>
+            <tr><td class="name">Full dedicated <span class="desc">— 26 days, 12 hrs/day</span></td><td class="num">₦3,000,000</td></tr>
+          </tbody>
+        </table>
+        <p style="font-size:13px;color:var(--muted);margin-top:14px;">Out-of-state assignments billed separately. Surcharges do not apply.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="sec-head">
+        <div>
+          <div class="sec-eyebrow">Occasions</div>
+          <div class="sec-title">Weddings &amp; events</div>
+        </div>
+        <div class="sec-note">Arrive in a presence-making car, on time, every time.</div>
+      </div>
+      <table>
+        <thead><tr><th>Item</th><th class="num">Rate</th></tr></thead>
+        <tbody>
+          <tr><td class="name">Event package <span class="desc">— 6 hours</span></td><td class="num">₦170,000</td></tr>
+          <tr><td class="name">Décor &amp; red carpet</td><td class="num">+₦40,000</td></tr>
+          <tr><td class="name">Each additional hour</td><td class="num">₦15,000</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="section">
+      <div class="sec-head">
+        <div>
+          <div class="sec-eyebrow">Beyond Lagos</div>
+          <div class="sec-title">Out-of-state travel</div>
+        </div>
+        <div class="sec-note">Quoted on request.</div>
+      </div>
+      <table>
+        <tbody>
+          <tr><td class="name">Daily rate</td><td class="desc">As per hourly &amp; daily / multi-day scale</td></tr>
+          <tr><td class="name">Distance beyond Lagos</td><td class="desc"><span class="price">₦150</span> / km, round trip</td></tr>
+          <tr><td class="name">Driver per diem</td><td class="desc"><span class="price">₦25,000</span> / night</td></tr>
+          <tr><td class="name">Lodging</td><td class="desc">At cost</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+  </main>
+
+  <div class="panels">
+    <div class="panel">
+      <h3>Surcharges &amp; extras</h3>
+      <div class="kv"><span class="k">Night service · 10 pm – 5 am</span><span class="v">+20%</span></div>
+      <div class="kv"><span class="k">Public holidays</span><span class="v">+20%</span></div>
+      <div class="kv"><span class="k">Additional waiting</span><span class="v">₦8,000 / 30 min</span></div>
+      <div class="kv"><span class="k">Tolls &amp; parking</span><span class="v">At cost</span></div>
+    </div>
+    <div class="panel">
+      <h3>Every hire includes</h3>
+      <ul class="incl">
+        <li>Professional, uniformed chauffeur</li>
+        <li>Fuel within Lagos metro</li>
+        <li>Comprehensive commercial insurance</li>
+        <li>Bottled water, Wi-Fi &amp; device charging</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="panels" style="border-top:1px solid var(--hair);">
+    <div class="panel" style="border-right:1px solid var(--hair);">
+      <h3>Booking</h3>
+      <p class="terms">Bookings are reconfirmed the day before travel. A 50% deposit secures your slot, with the balance settled on completion.</p>
+    </div>
+    <div class="panel">
+      <h3>Cancellation</h3>
+      <p class="terms">Free up to 24 hours before pickup. Within 24 hours, 50% applies. Within 6 hours or for a no-show, the full amount applies.</p>
+    </div>
+  </div>
+
+  <footer class="contact">
+    <div class="brand">AIYA HIRE<small>Executive chauffeur · Lagos</small></div>
+    <div class="lines">
+      <div><span class="lbl">WhatsApp</span><a href="#">+234 ___ ___ ____</a></div>
+      <div><span class="lbl">Email</span><a href="#">hello@aiya.example</a></div>
+      <div><span class="lbl">Instagram</span><a href="#">@aiya.hire</a></div>
+    </div>
+  </footer>
+  <p class="finepoint">Rates in Nigerian Naira (₦), valid 2026. Individual quotes valid 48 hours. Subject to vehicle availability — a single Toyota Vellfire serves one booking at a time.</p>
+
+</div>
+</body>
+</html>
